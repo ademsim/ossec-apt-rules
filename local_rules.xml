@@ -1,0 +1,164 @@
+<!-- Windows APT Local rules
+     Author: Adem Simsek
+-->
+
+<group name="local,syslog,win_apt">
+
+<rule id="60001" level="10">
+  <if_sid>18203,18217</if_sid>
+  <match>A member was added to a security-enabled local group.</match>
+  <description>A user has been added to Administrators Group, </description>
+  <description>Black Energy APT Phase 4 may have begun.</description>
+  <info type="link">https://info_linki</info>
+  <group>windows,pci_dss_8.1.2,pci_dss_10.2.5,group_changed,win_group_changed</group>
+</rule>
+
+<rule id="60002" level="12">
+    <if_sid>512</if_sid>
+    <match>Temp\rdws.exe</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Blue Termite APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60003" level="12">
+    <if_sid>512</if_sid>
+    <match>edg6EF885E2.tmp</match>
+    <description>A suspicious file has been detected, </description>
+    <description>APT28 Phase 1 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60004" level="12">
+    <if_sid>512</if_sid>
+    <match>com\svchost.exe</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Carbanak APT may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60005" level="12">
+    <if_sid>512</if_sid>
+    <match>number.exe</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Cloud Atlas APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60006" level="12">
+    <if_sid>512</if_sid>
+    <match>temp\New Text Document</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Dukes APT Phase 1 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60007" level="12">
+    <if_sid>550</if_sid>
+    <match>\Software\Microsoft\Windows\CurrentVersion\Run</match>
+    <description>A registry change has been detected, </description>
+    <description>Dukes APT Phase 2 may have begun.</description>
+    <info type="link">https://info_linki</info>
+    <group>win_apt,syscheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60008" level="12">
+    <if_sid>550</if_sid>
+    <match>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4</match>
+    <description>A registry change has been detected, </description>
+    <description>Duqu APT Phase 3 may have begun.</description>
+    <info type="link">https://info_linki</info>
+    <group>win_apt,syscheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60009" level="12">
+    <if_sid>512</if_sid>
+    <match>nls_933w.dll</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Equation APT Phase 4 may have begun.".</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60010" level="12">
+    <if_sid>512</if_sid>
+    <match>drivers\diskfilter.sys</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Hellsing APT 20_1 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60011" level="12">
+    <if_sid>512</if_sid>
+    <match>tmp\delete.bat</match>
+    <description>A suspicious file has been detected, </description>
+    <description>FinSpy APT Phase 1 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60012" level="12">
+    <if_sid>530</if_sid>
+    <match>Finspy_APT15_2</match>
+    <regex>lastClockrate</regex>
+    <description>A suspicious registry key has been detected, </description>
+    <description>FinSpy APT Phase 2 may have begun.</description>
+    <info type="link">https://info_linki</info>
+  </rule>
+
+  <rule id="60013" level="12">
+    <if_sid>512</if_sid>
+    <regex>jlc3V7we</regex>
+    <description>A suspicious file has been detected, </description>
+    <description>Hacking Team RCS APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60014" level="12">
+    <if_sid>530</if_sid>
+    <match>HackingHCS_APT_17_2</match>
+    <regex>J7PugHy</regex>
+    <description>A suspicious registry key has been detected, </description>
+    <description>Hacking Team RCS APT Phase 2 may have begun.</description>
+    <info type="link">https://info_linki</info>
+  </rule>
+
+  <rule id="60015" level="12">
+    <if_sid>512</if_sid>
+    <regex>diskfilter.sys</regex>
+    <description>A suspicious file has been detected, </description>
+    <description>Hellsing APT Phase 1 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60016" level="12">
+    <if_sid>512</if_sid>
+    <match>clare.pdb|irene.pdb|irene.pdb|xKat.pdb|msger_install.pdb|</match>
+    <match>msger_server.pdb|i386\xrat.pdb|test.pdb</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Hellsing APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60017" level="12">
+    <if_sid>512</if_sid>
+    <regex>auto.dll</regex>
+    <description>A suspicious file has been detected, </description>
+    <description>Kimsuky APT may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60018" level="12">
+    <if_sid>512</if_sid>
+    <match>Temp\update.exe</match>
+    <description>A suspicious file has been detected, </description>
+    <description>Naikon APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+
+  <rule id="60019" level="12">
+    <if_sid>512</if_sid>
+    <match>Adobe\netmgr</match>
+    <description>A suspicious file has been detected, </description>
+    <description>NetTraveler APT Phase 2 may have begun.</description>
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
+  </rule>
+</group>
