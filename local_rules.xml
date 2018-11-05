@@ -127,14 +127,16 @@
     <regex>J7PugHy</regex>
     <description>A suspicious registry key has been detected, </description>
     <description>Hacking Team RCS APT may have begun.</description>
-    <info type="link">https://info_linki</info>
+    <info type="link">https://citizenlab.ca/2012/10/backdoors-are-forever-hacking-team-and-the-targeting-of-dissent</info>   
+    <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
   <rule id="60015" level="12">
     <if_sid>512</if_sid>
     <regex>diskfilter.sys</regex>
     <description>A suspicious file has been detected, </description>
-    <description>Hellsing APT Phase 1 may have begun.</description>
+    <description>Hellsing APT may have begun.</description>
+    <info type="link">https://securelist.com/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back/69567</info>   
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -143,7 +145,8 @@
     <match>clare.pdb|irene.pdb|irene.pdb|xKat.pdb|msger_install.pdb|</match>
     <match>msger_server.pdb|i386\xrat.pdb|test.pdb</match>
     <description>A suspicious file has been detected, </description>
-    <description>Hellsing APT Phase 2 may have begun.</description>
+    <description>Hellsing APT may have begun.</description>
+    <info type="link">https://securelist.com/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back/69567</info>   
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -152,6 +155,7 @@
     <regex>auto.dll</regex>
     <description>A suspicious file has been detected, </description>
     <description>Kimsuky APT may have begun.</description>
+    <info type="link">https://securelist.com/the-kimsuky-operation-a-north-korean-apt/57915</info>   
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -160,6 +164,7 @@
     <match>Temp\update.exe</match>
     <description>A suspicious file has been detected, </description>
     <description>Naikon APT Phase 2 may have begun.</description>
+    <info type="link">https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/07205555/TheNaikonAPT-MsnMM1.pdf</info> 
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -168,6 +173,7 @@
     <match>Adobe\netmgr</match>
     <description>A suspicious file has been detected, </description>
     <description>NetTraveler APT Phase 2 may have begun.</description>
+    <info type="link">https://d2538mqrb7brka.cloudfront.net/wp-content/uploads/sites/43/2018/03/20134120/kaspersky-the-net-traveler-part1-final.pdf</info> 
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 </group>
