@@ -89,8 +89,8 @@ f:%TMP%\update.exe;
 [NetTraveler APT_Rule_1] [any] [https://d2538mqrb7brka.cloudfront.net/wp-content/uploads/sites/43/2018/03/20134120/kaspersky-the-net-traveler-part1-final.pdf]
 f:c:\Program Files\Adobe\netmgr.dll;
 f:c:\Program Files (x86)\Adobe\netmgr.dll;
-f:%temp%\netmgr.dll;
-f:%temp%\netmgr.exe;
-f:%temp%\perf2012.ini;
-f:%temp%\sysinfo2012.dll;
-f:%temp%\winlogin.exe;
+f:%TMP%\netmgr.dll;
+f:%TMP%\netmgr.exe;
+f:%TMP%\perf2012.ini;
+f:%TMP%\sysinfo2012.dll;
+f:%TMP%\winlogin.exe;
