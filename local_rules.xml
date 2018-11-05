@@ -1,5 +1,6 @@
 <!-- Windows APT Local rules
-     Author: Adem Simsek
+     Author: Adem Simsek ademsim@gmail.com
+
 -->
 
 <group name="local,syslog,win_apt">
@@ -8,8 +9,8 @@
   <if_sid>18203,18217</if_sid>
   <match>A member was added to a security-enabled local group.</match>
   <description>A user has been added to Administrators Group, </description>
-  <description>Black Energy APT Phase 4 may have begun.</description>
-  <info type="link">https://info_linki</info>
+  <description>Black Energy APT may have begun.</description>
+  <info type="link">https://www.f-secure.com/documents/996508/1030745/blackenergy_whitepaper.pdf</info>
   <group>windows,pci_dss_8.1.2,pci_dss_10.2.5,group_changed,win_group_changed</group>
 </rule>
 
@@ -17,7 +18,8 @@
     <if_sid>512</if_sid>
     <match>Temp\rdws.exe</match>
     <description>A suspicious file has been detected, </description>
-    <description>Blue Termite APT Phase 2 may have begun.</description>
+    <description>Blue Termite APT may have begun.</description>
+    <info type="link">https://securelist.com/new-activity-of-the-blue-termite-apt/71876</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -25,7 +27,8 @@
     <if_sid>512</if_sid>
     <match>edg6EF885E2.tmp</match>
     <description>A suspicious file has been detected, </description>
-    <description>APT28 Phase 1 may have begun.</description>
+    <description>APT28 Phase may have begun.</description>
+    <info type="link">https://www2.fireeye.com/rs/fireye/images/rpt-apt28.pdf</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -34,6 +37,7 @@
     <match>com\svchost.exe</match>
     <description>A suspicious file has been detected, </description>
     <description>Carbanak APT may have begun.</description>
+    <info type="link">https://securelist.com/the-great-bank-robbery-the-carbanak-apt/68732</info>   
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -41,7 +45,8 @@
     <if_sid>512</if_sid>
     <match>number.exe</match>
     <description>A suspicious file has been detected, </description>
-    <description>Cloud Atlas APT Phase 2 may have begun.</description>
+    <description>Cloud Atlas APT may have begun.</description>
+    <info type="link">https://securelist.com/red-october-detailed-malware-description-4-second-stage-of-attack/36884</info>   
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -57,8 +62,8 @@
     <if_sid>550</if_sid>
     <match>\Software\Microsoft\Windows\CurrentVersion\Run</match>
     <description>A registry change has been detected, </description>
-    <description>Dukes APT Phase 2 may have begun.</description>
-    <info type="link">https://info_linki</info>
+    <description>Dukes APT may have begun.</description>
+    <info type="link">https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Exploit:SWF/CVE-2011-0611.A</info>
     <group>win_apt,syscheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -66,8 +71,8 @@
     <if_sid>550</if_sid>
     <match>\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4</match>
     <description>A registry change has been detected, </description>
-    <description>Duqu APT Phase 3 may have begun.</description>
-    <info type="link">https://info_linki</info>
+    <description>Duqu APT may have begun.</description>
+    <info type="link">https://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/w32_duqu_the_precursor_to_the_next_stuxnet.pdf</info>
     <group>win_apt,syscheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -75,7 +80,8 @@
     <if_sid>512</if_sid>
     <match>nls_933w.dll</match>
     <description>A suspicious file has been detected, </description>
-    <description>Equation APT Phase 4 may have begun.".</description>
+    <description>Equation APT may have begun.".</description>
+    <info type="link">https://threatpost.com/inside-nls_933w-dll-the-equation-apt-persistence-module/111128</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -83,7 +89,8 @@
     <if_sid>512</if_sid>
     <match>drivers\diskfilter.sys</match>
     <description>A suspicious file has been detected, </description>
-    <description>Hellsing APT 20_1 may have begun.</description>
+    <description>Hellsing APT may have begun.</description>
+    <info type="link">https://securelist.com/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back/69567/</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
@@ -91,33 +98,35 @@
     <if_sid>512</if_sid>
     <match>tmp\delete.bat</match>
     <description>A suspicious file has been detected, </description>
-    <description>FinSpy APT Phase 1 may have begun.</description>
+    <description>FinSpy APT may have begun.</description>
+    <info type="link">https://citizenlab.ca/storage/finfisher/final/fortheireyesonly.pdf</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
   <rule id="60012" level="12">
     <if_sid>530</if_sid>
-    <match>Finspy_APT15_2</match>
+    <match>Finspy_2</match>
     <regex>lastClockrate</regex>
     <description>A suspicious registry key has been detected, </description>
-    <description>FinSpy APT Phase 2 may have begun.</description>
-    <info type="link">https://info_link</info>
+    <description>FinSpy APT may have begun.</description>
+    <info type="link">https://citizenlab.ca/storage/finfisher/final/fortheireyesonly.pdf</info>
   </rule>
 
   <rule id="60013" level="12">
     <if_sid>512</if_sid>
     <regex>jlc3V7we</regex>
-    <description>A suspicious file has been detected, </description>
-    <description>Hacking Team RCS APT Phase 2 may have begun.</description>
+    <description>A suspicious file has been detected </description>
+    <description>Hacking Team RCS APT may have begun.</description>
+    <info type="link">https://citizenlab.ca/2012/10/backdoors-are-forever-hacking-team-and-the-targeting-of-dissent</info>
     <group>win_apt,rootcheck,pci_dss_11.5,gpg13_4.11,gdpr_II_5.1.f</group>
   </rule>
 
   <rule id="60014" level="12">
     <if_sid>530</if_sid>
-    <match>HackingHCS_APT_17_2</match>
+    <match>HackingRCS_APT_2</match>
     <regex>J7PugHy</regex>
     <description>A suspicious registry key has been detected, </description>
-    <description>Hacking Team RCS APT Phase 2 may have begun.</description>
+    <description>Hacking Team RCS APT may have begun.</description>
     <info type="link">https://info_linki</info>
   </rule>
 
