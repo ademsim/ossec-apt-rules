@@ -101,7 +101,7 @@
     <regex>lastClockrate</regex>
     <description>A suspicious registry key has been detected, </description>
     <description>FinSpy APT Phase 2 may have begun.</description>
-    <info type="link">https://info_linki</info>
+    <info type="link">https://info_link</info>
   </rule>
 
   <rule id="60013" level="12">
