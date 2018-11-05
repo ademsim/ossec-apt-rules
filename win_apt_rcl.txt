@@ -1,0 +1,96 @@
+# OSSEC Windows Malware list - (C) 2007 Daniel B. Cid - dcid@ossec.net
+#
+# PCI Tagging by Wazuh <ossec@wazuh.com>.
+#
+# Released under the same license as OSSEC.
+# More details at the LICENSE file included with OSSEC or online
+# at: https://www.gnu.org/licenses/gpl.html
+#
+# [Malware name] [any or all] [reference]
+# type:<entry name>;
+#
+# Type can be:
+#             - f (for file or directory)
+#             - r (registry entry)
+#             - p (process running)
+#
+# Additional values:
+# For the registry and for directories, use "->" to look for a specific entry and another
+# "->" to look for the value.
+# Also, use " -> r:^\. -> ..." to search all files in a directory
+# For files, use "->" to look for a specific value in the file.
+#
+# # Values can be preceded by: =: (for equal) - default
+#                               r: (for ossec regexes)
+#                               >: (for strcmp greater)
+#                               <: (for strcmp  lower)
+# Multiple patterns can be specified by using " && " between them.
+# (All of them must match for it to return true).
+# Author Adem Simsek
+# ademsim@gmail.com
+
+
+[APT28_Rule_1] [any] [https://www2.fireeye.com/rs/fireye/images/rpt-apt28.pdf]
+f:C:\%USERPROFILE%\AppData\Local\Temp\edg6EF885E2.tmp;
+
+[APT28_Rule_1] [any] [https://www2.fireeye.com/rs/fireye/images/rpt-apt28.pdf]
+f:%TMP%\edg6EF885E2.tmp;
+
+[BlueTermite_Rule_1] [any] [https://securelist.com/new-activity-of-the-blue-termite-apt/71876]
+f:%TMP%\rdws.exe;
+
+[Carbanak APT_Rule_1] [any] [https://securelist.com/the-great-bank-robbery-the-carbanak-apt/68732]
+f:%WINDIR%\Sysnative\com\svchost.exe;
+p:r:svchost.exe && !%WINDIR%\System32\svchost.exe;
+
+[Dukes APT_Rule_1] [any] [https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Exploit:SWF/CVE-2011-0611.A]
+f:%TMP%\New Text Document;
+f:%temp%\scvhost.exe;
+
+[Equation APT_Rule_1] [any] [https://threatpost.com/inside-nls_933w-dll-the-equation-apt-persistence-module/111128/]
+f:%WINDIR%\Sysnative\drivers\nls_933w.dll;
+f:%WINDIR%\Sysnative\nls_933w.dll;
+
+[CloudAtlas APT_Rule_1] [any] [https://securelist.com/red-october-detailed-malware-description-4-second-stage-of-attack/36884]
+f:%WINDIR%\Sysnative\number.exe;
+f:%TMP%\number.exe;
+
+[Finspy APT_Rule_1] [any] [https://citizenlab.ca/storage/finfisher/final/fortheireyesonly.pdf]
+f:%TMP%\delete.bat;
+f:%TMP%\driverw.bat;
+
+#[Finspy APT_Rule_2] [any] [https://citizenlab.ca/storage/finfisher/final/fortheireyesonly.pdf]
+#r:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\lastClockrate\. -> >0;
+#r:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\lastClockrate\. -> >1;
+
+[HackingHCS APT_Rule_1] [any] [https://citizenlab.ca/2012/10/backdoors-are-forever-hacking-team-and-the-targeting-of-dissent/]
+f:%TMP%\jlc3V7we && %WINDIR%\Sysnative\jlc3V7we;
+
+[Hellsing APT_Rule_1] [any] [https://securelist.com/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back/69567/]
+f:%WINDIR%\Sysnative\drivers\diskfilter.sys;
+
+[Hellsing APT_Rule_2] [any] [https://securelist.com/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back/69567/]
+f:e:\Hellsing\release\clare.pdb 			&& c:\Hellsing\release\clare.pdb;
+f:e:\Hellsing\release\irene\irene.pdb            	&& c:\Hellsing\release\irene\irene.pdb;
+f:d:\hellsing\sys\irene\objchk_win7_x86\i386\irene.pdb  && c:\hellsing\sys\irene\objchk_win7_x86\i386\irene.pdb;
+f:d:\hellsing\sys\xkat\objchk_win7_x86\i386\xKat.pdb    && c:\hellsing\sys\xkat\objchk_win7_x86\i386\xKat.pdb;
+f:d:\Hellsing\release\msger\msger_install.pdb         	&& c:\Hellsing\release\msger\msger_install.pdb;
+f:d:\Hellsing\release\msger\msger_server.pdb           	&& c:\Hellsing\release\msger\msger_server.pdb;
+f:d:\hellsing\sys\xrat\objchk_win7_x86\i386\xrat.pdb    && c:\hellsing\sys\xrat\objchk_win7_x86\i386\xrat.pdb;
+f:D:\Hellsing\release\exe\exe\test.pdb                  && c:\Hellsing\release\exe\exe\test.pdb;
+
+[Kimsuky APT_Rule_1] [any] [https://securelist.com/the-kimsuky-operation-a-north-korean-apt/57915]
+f:%WINDIR%\Sysnative\System32\auto.dll;
+f:%WINDIR%\Sysnative\System32\kbdlv2.dll;
+
+[Naikon APT_Rule_1] [any] [https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/07205555/TheNaikonAPT-MsnMM1.pdf]
+f:%TMP%\update.exe;
+
+[NetTraveler APT_Rule_1] [any] [https://d2538mqrb7brka.cloudfront.net/wp-content/uploads/sites/43/2018/03/20134120/kaspersky-the-net-traveler-part1-final.pdf]
+f:c:\Program Files\Adobe\netmgr.dll;
+f:c:\Program Files (x86)\Adobe\netmgr.dll;
+f:%temp%\netmgr.dll;
+f:%temp%\netmgr.exe;
+f:%temp%\perf2012.ini;
+f:%temp%\sysinfo2012.dll;
+f:%temp%\winlogin.exe;
